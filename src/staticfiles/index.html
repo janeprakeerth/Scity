@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <style>
+    #map{
+        height: 300px;
+    }
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([22.5284288, 88.3918931], 14);
+        navigator.geolocation.getCurrentPosition((pos)=>{
+            console.log(pos)
+        })
+        var tileURL = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+    L.tileLayer(tileURL, {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+}).addTo(map);
+const lat = 22.5284288
+const long = 88.3918931
+var i = 0.0001
+var circle = L.circle([22.5284288, 88.3918931], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+var markup = L.marker([22.5645288 ,88.42799310000001]).addTo(map)
+markup.bindPopup('<b>Destination: </b>').addTo(map)
+var circle1 = L.circle([22.5645288 ,88.42799310000001], {
+    color: 'blue',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 100
+}).addTo(map);
+const destlat = 22.5645288 
+const destlong = 88.42799310000001
+function updateMap(){
+//     setInterval(()=>{
+//         circle = L.circle([lat+i, long+i], {
+//     color: 'red',
+//     fillColor: '#f03',
+//     fillOpacity: 0.5,
+//     radius: 100
+// }).addTo(map);
+
+// i=i+0.0001
+// console.log((lat+i),(long+i))
+//     },1000)
+while(((lat+i)!=destlat)&&((long+i)!=destlong)){
+    circle = L.circle([lat+i, long+i], {
+     color: 'red',
+     fillColor: '#f03',
+     fillOpacity: 0.5,
+     radius: 5
+}).addTo(map)
+i=i+0.0001
+}}
+updateMap()
+    </script>
+</body>
+</html>
