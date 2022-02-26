@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#14213d"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/app_icon_seller"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="LOGIN.json"
+        app:lottie_loop="true"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_login_seller"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/back"
+        android:textColorHint="#14213d"
+        android:layout_marginBottom="15dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:hint="  Email"
+            android:padding="5dp"
+            android:background="@drawable/back"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:textColorHint="#14213d"
+            android:textColorHighlight="#14213d"
+            android:layout_height="match_parent"
+            android:id="@+id/et_email_seller_login"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/back"
+        android:textColorHint="#14213d"
+        android:layout_marginBottom="15dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/et_password_seller_login"
+            android:textColorHighlight="#14213d"
+            android:hint="  Password"
+            android:background="@drawable/back"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:textColorHint="#14213d"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/ib_login_seller"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/main_color_app"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:background="@drawable/back"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_login_24"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Login With Otp"
+        app:backgroundTint="@color/white"
+        android:background="@drawable/back"
+        android:textColor="@color/main_color_app"
+        android:id="@+id/logi_with_otp_seller"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="New Seller? Click on Register"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        />
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#14213d"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sc_view">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="18dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="REGISTER_LOTTE.json"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/et_emai_id_register_seller"
+                    android:hint="   Email-id"
+                    android:background="@drawable/back"
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:inputType="text"
+                    android:layout_margin="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/back"
+
+                android:layout_marginBottom="15dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:textStyle="italic"
+
+                    android:layout_height="75dp"
+                    android:id="@+id/et_password_register_seller"
+                    android:hint="  Password"
+                    android:background="@drawable/back"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/back"
+
+                android:layout_marginBottom="15dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:textStyle="italic"
+                    android:layout_height="75dp"
+
+                    android:id="@+id/et_shop_name_register_seller"
+                    android:hint="  Shop Name"
+                    android:padding="5dp"
+                    android:background="@drawable/back"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:layout_margin="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/back"
+
+                android:layout_marginBottom="15dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textStyle="italic"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/et_shop_address_register_seller"
+                    android:hint="  Shop Address"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back"
+                    android:padding="5dp"
+                    android:drawableStart="@drawable/ic_baseline_add_location_24"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/back"
+
+                android:layout_marginBottom="15dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textStyle="italic"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/et_mobilenumber_register_seller"
+                    android:hint="  Shop Mobile Number"
+                    android:background="@drawable/back"
+                    android:padding="5dp"
+                    android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                    android:inputType="number"
+                    android:layout_margin="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                >
+                <TextView
+
+                    android:drawableStart="@drawable/ic_baseline_category_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Select Categorie"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    android:textColor="#14213d"
+                    android:layout_marginLeft="15dp"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_categories_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/category"
+                    android:layout_marginStart="10dp"
+
+                    />
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#14213d"
+                android:textStyle="bold"
+                android:background="@drawable/back"
+                app:backgroundTint="@color/white"
+                android:id="@+id/btn_register_seller"
+                android:layout_margin="20dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

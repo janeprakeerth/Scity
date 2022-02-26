@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otp_seller_request"
+    android:background="#14213d"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/back"
+        android:textColorHint="#14213d"
+        android:layout_marginBottom="15dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_enter_your_mobile_number_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:hint="  Enter Your Registered Mobile Number"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColorHighlight="#14213d"
+            android:textColorHint="#14213d" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Get Otp"
+        app:backgroundTint="@color/white"
+        android:background="@drawable/back"
+        android:textColor="@color/main_color_app"
+        android:id="@+id/get_otp_user"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/back"
+        android:textColorHint="#14213d"
+        android:layout_marginBottom="15dp"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/et_user_otp"
+            android:textColorHighlight="#14213d"
+            android:hint="  Enter The Otp Received"
+            android:background="@drawable/back"
+            android:padding="5dp"
+            android:textColorHint="#14213d"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Login"
+        app:backgroundTint="@color/white"
+        android:background="@drawable/back"
+        android:textColor="@color/main_color_app"
+        android:id="@+id/login_user"
+        />
+
+</LinearLayout>

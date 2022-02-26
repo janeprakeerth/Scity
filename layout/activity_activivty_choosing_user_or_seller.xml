@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#14213d"
+    tools:context=".activivty_choosing_user_or_seller">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="80dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="json_for_choose.json"
+        >
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Sign in as user"
+        android:textColor="#e5e5e5"
+        android:textSize="40sp"
+        android:textStyle="italic" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="#14213d"
+        android:src="@drawable/ic_baseline_login_25"
+        android:id="@+id/user_login"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in as seller"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textColor="#e5e5e5"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:layout_margin="15dp"
+        />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="#14213d"
+        android:src="@drawable/ic_baseline_login_25"
+        android:id="@+id/ib_seller_login"
+        />
+
+</LinearLayout>

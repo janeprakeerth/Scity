@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/exp_ll_seller_main_item"
+    android:background="@drawable/each_item_of_seller_box"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_item_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="1"
+        android:textColor="#e5e5e5"
+        android:layout_weight="0.2"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="#e5e5e5"
+        android:layout_height="match_parent"
+        android:text="Sample_Name"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_item_price"
+        android:layout_width="0dp"
+        android:textColor="#e5e5e5"
+        android:layout_weight="0.4"
+        android:layout_height="match_parent"
+        android:text="Price"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_item_quantity"
+        android:layout_width="0dp"
+        android:textColor="#e5e5e5"
+        android:layout_weight="0.4"
+        android:layout_height="match_parent"
+        android:text="Quantity"
+        android:layout_margin="5dp"
+        />
+
+</LinearLayout>
