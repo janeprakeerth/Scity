@@ -16,6 +16,27 @@ applicationRouter.get('/data1',(req,res)=>{
     res.send('Hello')
 })
 const bnda = "iYPvmw4SUQSWoCAP53OEa80J1C02"
+async function getUser(phNo,res){
+  const data = await database.firestore().collection('users').where('mobile_number','==',phNo).get()
+  if(data.length==0){
+    res.status(200).send(
+      {
+      status: 'failure',
+      })
+  }else{
+    data.forEach(d=>{
+      console.log(d.data().emailid)
+      res.status(200).send(
+        {
+        status: 'success',
+        emailid: d.data().emailid,
+        password: d.data().password
+      }
+      )
+    })
+  }
+  console.log(data)
+}
 applicationRouter.get('/data',async (req,res)=>{
     const data = await database.firestore().collection('users').doc(`${bnda}`).get()
     console.log(data.data())
@@ -36,7 +57,7 @@ applicationRouter.get('/data',async (req,res)=>{
             res.status(400).json({status:'Failure hai tu'})
         })
 });
-applicationRouter.get("/login", (req, res) => {
+applicationRouter.get("/userlogin", (req, res) => {
     client.verify
       .services(otpservicekey)
       .verifications.create({
@@ -44,11 +65,11 @@ applicationRouter.get("/login", (req, res) => {
         channel: req.query.channel,
       })
       .then((data) => {
-        res.status(200).send(data);
+        res.status(200).send(data)
       });
   });
 
-  applicationRouter.get("/verify", (req, res) => {
+  applicationRouter.get("/userverify", (req, res) => {
     client.verify
       .services(otpservicekey)
       .verificationChecks.create({
@@ -56,7 +77,8 @@ applicationRouter.get("/login", (req, res) => {
         code: req.query.code,
       })
       .then((data) => {
-        res.status(200).send(data);
+        console.log(data)
+        getUser(data.to.slice(3),res)
       })
       .catch((err) => {
         console.log(err);
