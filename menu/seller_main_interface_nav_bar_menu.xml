@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/home_seller_main_interface"
+    android:icon="@drawable/ic_baseline_home_24"
+    app:showAsAction="always"
+    android:title="Home"
+    >
+</item>
+<item android:id="@+id/items_seller_main_interface"
+    android:icon="@drawable/ic_baseline_add_24"
+    app:showAsAction="always"
+    android:title="Add Items"
+    >
+</item>
+<item android:id="@+id/profile_seller_main_interface"
+    android:icon="@drawable/ic_baseline_person_24"
+    app:showAsAction="always"
+    android:title="Profile"
+    >
+</item>
+</menu>

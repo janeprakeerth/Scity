@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14213d"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:lottie_loop="true"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+
+        app:lottie_fileName="add_item.json"
+        />
+
+    
+    <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+        android:layout_marginTop="40dp"
+       >
+       <EditText
+           android:id="@+id/et_item_name"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textColorHint="#14213d"
+           android:hint="Type Item Name"
+           />
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp">
+       <EditText
+           android:id="@+id/et_item_price"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textColorHint="#14213d"
+           android:hint="Enter The Price (per unit)"
+           />
+   </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/et_item_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#14213d"
+            android:hint="Enter The Quantity"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_item_add"
+        app:backgroundTint="#fca311"
+
+        android:text="Add Item"
+        />
+
+</LinearLayout>

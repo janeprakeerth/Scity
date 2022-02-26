@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <item
+        android:id="@+id/nav_btn_login"
+
+        android:title="Login"
+        android:icon = "@drawable/login_img"
+        app:showAsAction="always"
+
+        >
+
+    </item>
+    <item
+        android:id="@+id/nav_btn_register"
+        android:icon = "@drawable/register_icon"
+        android:title="Register"
+        app:showAsAction="always"
+
+        >
+
+    </item>
+</menu>
