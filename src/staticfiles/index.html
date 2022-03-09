@@ -42,8 +42,9 @@ var circle = L.circle([22.5284288, 88.3918931], {
     fillOpacity: 0.5,
     radius: 500
 }).addTo(map);
+circle.bindPopup('<b>Src: SampleSeller</b>')
 var markup = L.marker([22.5645288 ,88.42799310000001]).addTo(map)
-markup.bindPopup('<b>Destination: </b>').addTo(map)
+markup.bindPopup('<b>Destination: SampleUser (phNo: 94385*****)</b>').addTo(map)
 var circle1 = L.circle([22.5645288 ,88.42799310000001], {
     color: 'blue',
     fillColor: '#f03',
